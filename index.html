@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorry Kweeeennn 👑🥺</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffd6e8, #fff1c1);
+            font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .gif-section img {
+            width: 220px;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .audio-box {
+            margin: 30px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        button {
+            background: #ff4f81;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #e63a6d;
+            transform: scale(1.1);
+        }
+
+        #forgive-text {
+            margin-top: 25px;
+            font-size: 1.4rem;
+            min-height: 40px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Sorry Kweeeennn 👑😭</h1>
+    <p class="subtitle">
+        Sorry I breathe the same air as you, cutie 🥺  
+        Please forgive this absolute imbecile 🧎‍♂️
+    </p>
+
+    <div class="gif-section">
+        <img src="https://media.giphy.com/media/ISOckXUybVfQ4/giphy.gif">
+        <img src="https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif">
+    </div>
+
+    <!-- 🎵 AUDIO SECTION -->
+    <div class="audio-box">
+        <h3>🎧 Background Apology Music</h3>
+        <p>(For maximum emotional damage)</p>
+        <audio controls loop>
+            <source src="sorry.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <h2>My Apology Exhibit 😔👇</h2>
+
+    <div class="image-grid">
+        <div class="card">
+            <img src="5.png">
+            <p>Sorry sorry sorry 😭</p>
+        </div>
+        <div class="card">
+            <img src="6.png">
+            <p>So sorry for being such a jerk 😔</p>
+        </div>
+        <div class="card">
+            <img src="7.png">
+            <p>Sorry for breathing the same air as you 🥲</p>
+        </div>
+        <div class="card">
+            <img src="8.png">
+            <p>Please forgive me 🤡❤️</p>
+        </div>
+    </div>
+
+    <button onclick="forgive()">Click to Forgive Me 🥹👉👈</button>
+    <p id="forgive-text"></p>
+
+    <footer>
+        Made with regret, tears, and bad decisions 💔
+    </footer>
+</div>
+
+<script>
+function forgive() {
+    const messages = [
+        "FORGIVEN BY THE KWEEN 👑😭",
+        "BESTIES AGAIN 🤝😌",
+        "I AM FREE FROM SIN 🧎‍♂️✨",
+        "SHE SHOWED MERCY 🥹❤️",
+        "APOLOGY SUCCESSFUL 😭🔥"
+    ];
+    document.getElementById("forgive-text").innerText =
+        messages[Math.floor(Math.random() * messages.length)];
+}
+</script>
+
+</body>
+</html>
