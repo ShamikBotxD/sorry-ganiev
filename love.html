@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day, Suvangi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #7a0026;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.92);
+  padding: 25px;
+  border-radius: 22px;
+  max-width: 500px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+  animation: fadeIn 1.5s ease;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.gallery img:hover { transform: scale(1.06); }
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+button {
+  background: #d90429;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { transform: scale(1.07); background: #a6031e; }
+
+.hidden {
+  display: none;
+  margin-top: 15px;
+  font-style: italic;
+  color: #a6031e;
+}
+
+/* Image overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+/* Couple section */
+.couple-section {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.couple {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.person {
+  width: 80px;
+  height: 120px;
+  background: #ffd6e0;
+  border-radius: 40px 40px 30px 30px;
+  position: relative;
+  animation: lean 3s ease-in-out infinite;
+}
+
+.girl {
+  background: #ffe5ec;
+  animation-delay: 1.5s;
+}
+
+.face {
+  font-size: 2.2rem;
+  margin-top: 25px;
+}
+
+.kiss {
+  position: absolute;
+  top: 35px;
+  left: 100%;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.kissing .kiss {
+  animation: kiss 1.5s ease forwards;
+}
+
+.heart {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pop 2s infinite;
+}
+
+.couple-text {
+  margin-top: 12px;
+  font-style: italic;
+  color: #a6031e;
+  font-size: 0.95rem;
+}
+
+/* Floating roses */
+.rose {
+  position: absolute;
+  font-size: 22px;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lean {
+  0%,100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+@keyframes pop {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+@keyframes kiss {
+  0% { opacity: 0; transform: translateX(0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-10px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Happy Rose Day 🌹</h1>
+  <h2>For my favorite person — Suvangi ❤️</h2>
+
+  <div class="card">
+
+    <div class="gallery">
+      <img src="1.jpg" onclick="openImg(this.src)">
+      <img src="2.jpg" onclick="openImg(this.src)">
+      <img src="3.jpg" onclick="openImg(this.src)">
+      <img src="4.jpg" onclick="openImg(this.src)">
+    </div>
+
+    <p>
+      Every smile of yours feels like a rose blooming in my heart.
+      This little page holds just a fraction of how special you are to me.
+    </p>
+
+    <div class="btn-group">
+      <button onclick="toggle('love')">Why I love you 💖</button>
+      <button onclick="toggle('surprise')">A surprise 🌹</button>
+      <button onclick="kiss()">Click me 🙈</button>
+    </div>
+
+    <div class="hidden" id="love">
+      Your kindness, your smile, the way you exist — everything about you feels like home.
+    </div>
+    <div class="hidden" id="surprise">
+      No matter how many roses the world gives, you’ll always be my favorite one 🌹❤️
+    </div>
+
+    <div class="couple-section">
+      <div class="couple" id="couple">
+        <div class="person boy">
+          <div class="face">😊</div>
+          <div class="heart">❤️</div>
+          <div class="kiss">💋</div>
+        </div>
+        <div class="person girl">
+          <div class="face">😊</div>
+          <div class="heart">❤️</div>
+        </div>
+      </div>
+      <p class="couple-text">That’s us 🥰</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeImg()">
+  <img id="overlayImg">
+</div>
+
+<!-- Romantic background music -->
+<audio id="music" src="love.mp3"></audio>
+
+<script>
+const music = document.getElementById('music');
+music.volume = 0.4;
+
+function toggle(id){
+  document.querySelectorAll('.hidden').forEach(e=>e.style.display='none');
+  document.getElementById(id).style.display='block';
+}
+
+function openImg(src){
+  overlay.style.display='flex';
+  overlayImg.src = src;
+}
+function closeImg(){
+  overlay.style.display='none';
+}
+
+function kiss(){
+  document.getElementById('couple').classList.add('kissing');
+  music.play();
+  setTimeout(()=>document.getElementById('couple').classList.remove('kissing'),1500);
+}
+
+function createRose(){
+  const r=document.createElement('div');
+  r.className='rose';
+  r.innerText='🌹';
+  r.style.left=Math.random()*100+'vw';
+  r.style.animationDuration=(4+Math.random()*4)+'s';
+  document.body.appendChild(r);
+  setTimeout(()=>r.remove(),8000);
+}
+setInterval(createRose,500);
+</script>
+
+</body>
+</html>
